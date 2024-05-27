@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelTrekker</title>
+</head>
+<body>
+    <h3>Create New List</h3>
+
+    <!-- Form to create a new listing -->
+    <form method="POST" action="/listings">
+        <!-- Input field for listing title -->
+        <input name="listing[title]" type="text" placeholder="Enter title" required>
+        <br>
+        
+        <!-- Textarea for listing description -->
+        <textarea name="listing[description]" cols="30" rows="5" placeholder="Write description" required></textarea>
+        <br>
+        
+        <!-- Input field for image URL -->
+        <input name="listing[image]" type="text" placeholder="Enter image URL/LINK" required>
+        <br>
+        
+        <!-- Input field for listing price -->
+        <input name="listing[price]" type="number" placeholder="Enter price" required>
+        <br>
+        
+        <!-- Input field for country name -->
+        <input name="listing[country]" type="text" placeholder="Country name" required>
+        <br>
+        
+        <!-- Input field for location -->
+        <input name="listing[location]" type="text" placeholder="Enter location" required>
+        <br>
+        
+        <!-- Submit button to add the listing -->
+        <button type="submit">ADD</button>
+    </form>
+
+</body>
+</html>

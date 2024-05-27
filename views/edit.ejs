@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata and title of the document -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Listing</title>
+</head>
+
+<body>
+    <!-- Header for the edit listing page -->
+    <h3>Edit Listing</h3>
+
+    <!-- Form for editing an existing listing, sends a PUT request to update the listing -->
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+        <!-- Input for the listing title -->
+        <input name="listing[title]" type="text" value="<%= listing.title %>" placeholder="Enter title" required>
+        <br>
+        <!-- Textarea for the listing description -->
+        <textarea name="listing[description]" cols="30" rows="5" placeholder="Write description" required><%= listing.description %></textarea>
+        <br>
+        <!-- Input for the listing image URL -->
+        <input name="listing[image]" type="text" value="<%= listing.image %>" placeholder="Enter image URL/LINK" required>
+        <br>
+        <!-- Input for the listing price -->
+        <input name="listing[price]" type="number" value="<%= listing.price %>" placeholder="Enter price" required>
+        <br>
+        <!-- Input for the country of the listing -->
+        <input name="listing[country]" type="text" value="<%= listing.country %>" placeholder="Country name" required>
+        <br>
+        <!-- Input for the location of the listing -->
+        <input name="listing[location]" type="text" value="<%= listing.location %>" placeholder="Enter location" required>
+        <br>
+        <!-- Submit button to update the listing -->
+        <button type="submit">Update</button>
+    </form>
+
+</body>
+
+</html>

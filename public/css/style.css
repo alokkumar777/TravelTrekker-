@@ -1,0 +1,27 @@
+/* ROOT COLORS */
+:root {
+  --navbar-bg-primary: #ff5733; /* Bright Orange */
+  --navbar-bg-secondary: #33b5e5; /* Bright Blue */
+  --navbar-bg-success: #00c851; /* Bright Green */
+  --navbar-bg-danger: #ff4444; /* Bright Red */
+  --navbar-bg-warning: #ffbb33; /* Bright Yellow */
+  --navbar-bg-info: #33d9b2; /* Bright Teal */
+  --navbar-bg-light: #f8f9fa; /* Light Gray */
+  --navbar-bg-dark: #343a40; /* Dark Gray */
+  --navbar-text-light: #ffffff; /* White */
+  --navbar-text-dark: #000000; /* Black */
+}
+
+/* NavBar */
+.navbar {
+  height: 5rem;
+  background-color: var(--navbar-text-light);
+}
+
+.nav-link {
+    color: var(--navbar-text-dark) !important;
+}
+
+.fa-compass {
+    color: var(--navbar-bg-danger);
+}

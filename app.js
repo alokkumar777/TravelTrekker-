@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const path = require('path');
 const Listing = require('./models/listing');
 const methodOverride = require('method-override');
+const ejsMate = require('ejs-mate');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -19,10 +20,12 @@ app.set('views', path.join(__dirname, 'views'));
 // Middleware to parse URL-encoded data and override HTTP methods
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.engine('ejs', ejsMate);
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Home route
 app.get('/', (req, res) => {
-    res.send('WORKING...');
+    res.send(`I'm working on it`);
 });
 
 // Route to display all listings

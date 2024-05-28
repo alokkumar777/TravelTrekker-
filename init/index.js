@@ -3,9 +3,9 @@
 // Import the mongoose library for MongoDB interaction
 const mongoose = require('mongoose');
 // Import initial data to seed the database
-const initData = require('./data.js');
+const initData = require('data.js');
 // Import the Listing model
-const Listing = require('../models/listing.js');
+const Listing = require('listing.js');
 
 // Main function to connect to the database
 main()

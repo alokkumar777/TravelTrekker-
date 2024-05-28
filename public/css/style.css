@@ -1,27 +1,285 @@
+/* Ensure html and body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Wrapper takes full height and uses flexbox */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content should take all available space */
+main {
+  flex: 1;
+}
+
 /* ROOT COLORS */
 :root {
-  --navbar-bg-primary: #ff5733; /* Bright Orange */
-  --navbar-bg-secondary: #33b5e5; /* Bright Blue */
-  --navbar-bg-success: #00c851; /* Bright Green */
-  --navbar-bg-danger: #ff4444; /* Bright Red */
-  --navbar-bg-warning: #ffbb33; /* Bright Yellow */
-  --navbar-bg-info: #33d9b2; /* Bright Teal */
-  --navbar-bg-light: #f8f9fa; /* Light Gray */
-  --navbar-bg-dark: #343a40; /* Dark Gray */
-  --navbar-text-light: #ffffff; /* White */
-  --navbar-text-dark: #000000; /* Black */
+  --bg-primary: #ff5733; /* Bright Orange */
+  --bg-secondary: #33b5e5; /* Bright Blue */
+  --bg-success: #00c851; /* Bright Green */
+  --bg-danger: #ff4444; /* Bright Red */
+  --bg-warning: #ffbb33; /* Bright Yellow */
+  --bg-info: #33d9b2; /* Bright Teal */
+  --bg-light: #f8f9fa; /* Light Gray */
+  --bg-dark: #343a40; /* Dark Gray */
+  --text-light: #ffffff; /* White */
+  --text-dark: #000000; /* Black */
 }
 
 /* NavBar */
 .navbar {
   height: 5rem;
-  background-color: var(--navbar-text-light);
+  background-color: var(--text-light) !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .nav-link {
-    color: var(--navbar-text-dark) !important;
+    color: var(--text-dark) !important;
 }
 
 .fa-compass {
-    color: var(--navbar-bg-danger);
+    color: var(--bg-danger);
+}
+
+/* Footer styling */
+footer {
+  background-color: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #e7e7e7;
+  /* font-family: Arial, sans-serif; */
+  color: var(--text-dark);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Privacy policy and website name */
+footer div:first-child {
+  margin-bottom: 10px;
+}
+
+/* Links styling */
+footer a {
+  color: var(--text-dark);
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #0073e6; /* Change to your preferred hover color */
+}
+
+/* Social media links */
+footer div:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+/* Privacy checkbox */
+footer div:last-child {
+  margin-top: 10px;
+}
+
+footer label {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Add some padding to the checkbox */
+#privacy-checkbox {
+  vertical-align: middle;
+}
+
+/* card styling */
+.destination-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+  justify-content: space-around; /* Adjust alignment */
+}
+
+.card {
+  width: 18rem;
+  margin-bottom: 20px; /* Space at the bottom of each card */
+  flex: 1 1 calc(33.333% - 40px); /* Adjust the width of the cards */
+  box-sizing: border-box;
+  border: none !important;  
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 300px; /* Fixed height for all images */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  border-radius: 1rem !important;
+}
+
+.btn {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-light) !important;
+}
+
+.btn:hover {
+  background-color: var(--text-dark) !important;
+  color: var(--text-light) !important;
+}
+
+/* Make card responsive */
+@media (max-width: 992px) {
+  .card {
+    flex: 1 1 calc(50% - 40px); /* Two cards per row on medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    flex: 1 1 100%; /* One card per row on small screens */
+  }
+}
+
+/* Container for the form */
+.form-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Form styling */
+.create-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Styling for input fields */
+.create-form input[type="text"],
+.create-form input[type="number"],
+.create-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus state for input fields */
+.create-form input[type="text"]:focus,
+.create-form input[type="number"]:focus,
+.create-form textarea:focus {
+  border-color: var(--bg-dark);
+  outline: none;
+}
+
+/* Styling for textarea */
+.create-form textarea {
+  resize: vertical;
+}
+
+/* Styling for the submit button */
+.create-form button[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--bg-dark);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover state for the submit button */
+.create-form button[type="submit"]:hover {
+  background-color: var(--text-dark);
+}
+
+/* Styling for the form heading */
+.form-container h3 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Show section styling */
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
+}
+
+.card2 {
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
+}
+
+.card2-header {
+  border-bottom: 1px solid #dee2e6;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.card2-title {
+  font-size: 24px;
+  margin: 0;
+}
+
+.listing-details2 {
+  list-style: none;
+  padding: 0;
+}
+
+.listing-details2 li {
+  margin-bottom: 10px;
+}
+
+.action-buttons2 {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  margin-top: 20px; /* Space above the button group */
+
+}
+
+/* Style for the image card container */
+.image-card {
+  width: 600px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Style for the image */
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Hover effect */
+.image-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

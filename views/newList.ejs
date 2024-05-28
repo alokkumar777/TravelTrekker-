@@ -1,66 +1,80 @@
 <% layout('layouts/boilerplate.ejs') -%>
 
 <body>
-  <h3>Create New List</h3>
+  <div class="form-container">
+    <h3>Create New List</h3>
 
-  <!-- Form to create a new listing -->
-  <form method="POST" action="/listings">
-    <!-- Input field for listing title -->
-    <input
-      name="listing[title]"
-      type="text"
-      placeholder="Enter title"
-      required
-    />
-    <br />
+    <!-- Form to create a new listing -->
+    <form method="POST" action="/listings" class="create-form">
+      <!-- Input field for listing title -->
+      <fieldset>
+        <legend>Title</legend>
+        <input
+          name="listing[title]"
+          type="text"
+          placeholder="Enter title"
+          required
+        />
+      </fieldset>
 
-    <!-- Textarea for listing description -->
-    <textarea
-      name="listing[description]"
-      cols="30"
-      rows="5"
-      placeholder="Write description"
-      required
-    ></textarea>
-    <br />
+      <!-- Textarea for listing description -->
+      <fieldset>
+        <legend>Description</legend>
+        <textarea
+          name="listing[description]"
+          cols="30"
+          rows="5"
+          placeholder="Write description"
+          required
+        ></textarea>
+      </fieldset>
 
-    <!-- Input field for image URL -->
-    <input
-      name="listing[image]"
-      type="text"
-      placeholder="Enter image URL/LINK"
-      required
-    />
-    <br />
+      <!-- Input field for image URL -->
+      <fieldset>
+        <legend>Image URL</legend>
+        <input
+          name="listing[image]"
+          type="text"
+          placeholder="Enter image URL/LINK"
+          required
+        />
+      </fieldset>
 
-    <!-- Input field for listing price -->
-    <input
-      name="listing[price]"
-      type="number"
-      placeholder="Enter price"
-      required
-    />
-    <br />
+      <!-- Input field for listing price -->
+      <fieldset>
+        <legend>Price</legend>
+        <input
+          name="listing[price]"
+          type="number"
+          placeholder="Enter price"
+          required
+        />
+      </fieldset>
 
-    <!-- Input field for country name -->
-    <input
-      name="listing[country]"
-      type="text"
-      placeholder="Country name"
-      required
-    />
-    <br />
+      <!-- Input field for country name -->
+      <fieldset>
+        <legend>Country</legend>
+        <input
+          name="listing[country]"
+          type="text"
+          placeholder="Country name"
+          required
+        />
+      </fieldset>
 
-    <!-- Input field for location -->
-    <input
-      name="listing[location]"
-      type="text"
-      placeholder="Enter location"
-      required
-    />
-    <br />
+      <!-- Input field for location -->
+      <fieldset>
+        <legend>Location</legend>
+        <input
+          name="listing[location]"
+          type="text"
+          placeholder="Enter location"
+          required
+        />
+      </fieldset>
 
-    <!-- Submit button to add the listing -->
-    <button type="submit">ADD</button>
-  </form>
+      <!-- Submit button to add the listing -->
+      <button type="submit">ADD</button>
+    </form>
+  </div>
 </body>

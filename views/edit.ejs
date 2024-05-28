@@ -1,12 +1,15 @@
 <% layout('layouts/boilerplate.ejs') -%>
 
 <body>
+  <div class="form-container" >
   <!-- Header for the edit listing page -->
   <h3>Edit Listing</h3>
 
   <!-- Form for editing an existing listing, sends a PUT request to update the listing -->
-  <form method="POST" action="/listings/<%= listing._id %>?_method=PUT">
+  <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" class="create-form">
     <!-- Input for the listing title -->
+    <fieldset>
+      <legend>Title</legend>
     <input
       name="listing[title]"
       type="text"
@@ -14,8 +17,11 @@
       placeholder="Enter title"
       required
     />
-    <br />
+    </fieldset>
+
     <!-- Textarea for the listing description -->
+    <fieldset>
+      <legend>Description</legend>
     <textarea
       name="listing[description]"
       cols="30"
@@ -25,8 +31,11 @@
     >
 <%= listing.description %></textarea
     >
-    <br />
+    </fieldset>
+
     <!-- Input for the listing image URL -->
+    <fieldset>
+      <legend>Image</legend>
     <input
       name="listing[image]"
       type="text"
@@ -34,8 +43,11 @@
       placeholder="Enter image URL/LINK"
       required
     />
-    <br />
+    </fieldset>
+
     <!-- Input for the listing price -->
+    <fieldset>
+      <legend>Price</legend>
     <input
       name="listing[price]"
       type="number"
@@ -43,8 +55,11 @@
       placeholder="Enter price"
       required
     />
-    <br />
+    </fieldset>
+
     <!-- Input for the country of the listing -->
+    <fieldset>
+      <legend>Country</legend>
     <input
       name="listing[country]"
       type="text"
@@ -52,8 +67,11 @@
       placeholder="Country name"
       required
     />
-    <br />
+    </fieldset>
+
     <!-- Input for the location of the listing -->
+    <fieldset>
+      <legend>Location</legend>
     <input
       name="listing[location]"
       type="text"
@@ -61,8 +79,9 @@
       placeholder="Enter location"
       required
     />
-    <br />
+    </fieldset>
     <!-- Submit button to update the listing -->
     <button type="submit">Update</button>
   </form>
+  </div>
 </body>

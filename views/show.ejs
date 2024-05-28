@@ -1,37 +1,56 @@
 <% layout('layouts/boilerplate.ejs') -%>
+
 <body>
-  <h3>Detail:</h3>
-
-  <!-- Display listing details in an unordered list -->
-  <ul>
-    <li>
-      <!-- Display the listing's title -->
-      <%= listing.title %>
-    </li>
-    <li>
-      <!-- Display the listing's description -->
-      <%= listing.description %>
-    </li>
-    <li>
-      <!-- Display the listing's price formatted in Indian Rupees -->
-      &#8377;<%= listing.price ? listing.price.toLocaleString('en-IN') : 'N/A'
-      %>
-    </li>
-    <li>
-      <!-- Display the listing's location -->
-      <%= listing.location %>
-    </li>
-    <li>
-      <!-- Display the listing's country -->
-      <%= listing.country %>
-    </li>
-  </ul>
-
-  <!-- Link to edit the current listing -->
-  <a href="/listings/<%= listing._id %>/edit">Edit this listing</a>
-  
-  <!-- Delete form -->
-  <form action="/listings/<%= listing._id %>?_method=DELETE" method="POST">
-    <button type="submit">Delete</button>
-  </form>
+  <!-- Container for the listing details -->
+  <div class="container2">
+    <!-- Image display -->
+    <img
+      src="<%= listing.image.url %>"
+      class="image-card"
+      alt="<%= listing.title %>"
+    />
+    <!-- Card for displaying listing details -->
+    <div class="card2">
+      <!-- Header section of the card -->
+      <div class="card2-header">
+        <!-- Title of the card -->
+        <h3 class="card2-title">Detail:</h3>
+      </div>
+      <!-- Body section of the card -->
+      <div class="card2-body">
+        <!-- List to display various details of the listing -->
+        <ul class="listing-details2">
+          <!-- Title of the listing -->
+          <li><strong>Title:</strong> <%= listing.title %></li>
+          <!-- Description of the listing -->
+          <li><strong>Description:</strong> <%= listing.description %></li>
+          <!-- Price of the listing -->
+          <li>
+            <strong>Price:</strong> &#8377;<%= listing.price ?
+            listing.price.toLocaleString('en-IN') : 'N/A' %>
+          </li>
+          <!-- Location of the listing -->
+          <li><strong>Location:</strong> <%= listing.location %></li>
+          <!-- Country of the listing -->
+          <li><strong>Country:</strong> <%= listing.country %></li>
+        </ul>
+        <!-- Action buttons for editing and deleting the listing -->
+        <div class="action-buttons2">
+          <!-- Edit button with link to edit page -->
+          <a href="/listings/<%= listing._id %>/edit" class="btn"
+            >Edit this listing</a
+          >
+          <!-- Form for deleting the listing -->
+          <form
+            action="/listings/<%= listing._id %>?_method=DELETE"
+            method="POST"
+            class="delete-form"
+          >
+            <!-- Delete button -->
+            <button type="submit" class="btn">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>

@@ -283,3 +283,43 @@ footer label {
 .image-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and below */
+@media (max-width: 768px) {
+  .container2 {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .card2, .image-card {
+    width: 100%;
+  }
+
+  .card2-title {
+    font-size: 20px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .card2 {
+    padding: 15px;
+  }
+
+  .card2-title {
+    font-size: 18px;
+  }
+
+  .action-buttons2 {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .image-card {
+    width: 100%;
+    padding: 5px;
+  }
+}

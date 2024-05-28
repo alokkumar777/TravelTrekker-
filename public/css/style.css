@@ -318,6 +318,10 @@ footer label {
     gap: 5px;
   }
 
+  .action-buttons2 button{
+    width: 100%;
+  }
+
   .image-card {
     width: 100%;
     padding: 5px;

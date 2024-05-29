@@ -1,5 +1,6 @@
 /* Ensure html and body take full height */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
 }
@@ -18,16 +19,26 @@ main {
 
 /* ROOT COLORS */
 :root {
-  --bg-primary: #ff5733; /* Bright Orange */
-  --bg-secondary: #33b5e5; /* Bright Blue */
-  --bg-success: #00c851; /* Bright Green */
-  --bg-danger: #ff4444; /* Bright Red */
-  --bg-warning: #ffbb33; /* Bright Yellow */
-  --bg-info: #33d9b2; /* Bright Teal */
-  --bg-light: #f8f9fa; /* Light Gray */
-  --bg-dark: #343a40; /* Dark Gray */
-  --text-light: #ffffff; /* White */
-  --text-dark: #000000; /* Black */
+  --bg-primary: #ff5733;
+  /* Bright Orange */
+  --bg-secondary: #33b5e5;
+  /* Bright Blue */
+  --bg-success: #00c851;
+  /* Bright Green */
+  --bg-danger: #ff4444;
+  /* Bright Red */
+  --bg-warning: #ffbb33;
+  /* Bright Yellow */
+  --bg-info: #33d9b2;
+  /* Bright Teal */
+  --bg-light: #f8f9fa;
+  /* Light Gray */
+  --bg-dark: #343a40;
+  /* Dark Gray */
+  --text-light: #ffffff;
+  /* White */
+  --text-dark: #000000;
+  /* Black */
 }
 
 /* NavBar */
@@ -40,11 +51,11 @@ main {
 }
 
 .nav-link {
-    color: var(--text-dark) !important;
+  color: var(--text-dark) !important;
 }
 
 .fa-compass {
-    color: var(--bg-danger);
+  color: var(--bg-danger);
 }
 
 /* Footer styling */
@@ -74,7 +85,8 @@ footer a {
 }
 
 footer a:hover {
-  color: #0073e6; /* Change to your preferred hover color */
+  color: #0073e6;
+  /* Change to your preferred hover color */
 }
 
 /* Social media links */
@@ -101,16 +113,20 @@ footer label {
 .destination-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px; /* Space between cards */
-  justify-content: space-around; /* Adjust alignment */
+  gap: 20px;
+  /* Space between cards */
+  justify-content: space-around;
+  /* Adjust alignment */
 }
 
 .card {
   width: 18rem;
-  margin-bottom: 20px; /* Space at the bottom of each card */
-  flex: 1 1 calc(33.333% - 40px); /* Adjust the width of the cards */
+  margin-bottom: 20px;
+  /* Space at the bottom of each card */
+  flex: 1 1 calc(33.333% - 40px);
+  /* Adjust the width of the cards */
   box-sizing: border-box;
-  border: none !important;  
+  border: none !important;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -118,8 +134,10 @@ footer label {
 
 .card-img-top {
   width: 100%;
-  height: 300px; /* Fixed height for all images */
-  object-fit: cover; /* Ensures the image covers the area without distortion */
+  height: 300px;
+  /* Fixed height for all images */
+  object-fit: cover;
+  /* Ensures the image covers the area without distortion */
   border-radius: 1rem !important;
 }
 
@@ -136,13 +154,15 @@ footer label {
 /* Make card responsive */
 @media (max-width: 992px) {
   .card {
-    flex: 1 1 calc(50% - 40px); /* Two cards per row on medium screens */
+    flex: 1 1 calc(50% - 40px);
+    /* Two cards per row on medium screens */
   }
 }
 
 @media (max-width: 576px) {
   .card {
-    flex: 1 1 100%; /* One card per row on small screens */
+    flex: 1 1 100%;
+    /* One card per row on small screens */
   }
 }
 
@@ -257,9 +277,10 @@ footer label {
 
 .action-buttons2 {
   display: flex;
-  gap: 10px; /* Space between buttons */
-  margin-top: 20px; /* Space above the button group */
-
+  gap: 10px;
+  /* Space between buttons */
+  margin-top: 20px;
+  /* Space above the button group */
 }
 
 /* Style for the image card container */
@@ -294,7 +315,8 @@ footer label {
     gap: 20px;
   }
 
-  .card2, .image-card {
+  .card2,
+  .image-card {
     width: 100%;
   }
 
@@ -318,7 +340,7 @@ footer label {
     gap: 5px;
   }
 
-  .action-buttons2 button{
+  .action-buttons2 button {
     width: 100%;
   }
 
